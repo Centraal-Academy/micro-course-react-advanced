@@ -1,3 +1,5 @@
+const webpack = require('webpack')
+
 module.exports = {
   module: {
     rules: [
@@ -27,5 +29,10 @@ module.exports = {
         }
       }
     }
-  }
+  },
+  plugins: [
+    new webpack.DllReferencePlugin({
+      manifest: require('./libraries-manifest.json')
+    })
+  ]
 }
