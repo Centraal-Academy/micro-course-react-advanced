@@ -1,0 +1,16 @@
+{
+  "name": "tree-shaking",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "sideEffects": false,
+  "scripts": {
+    "build:dev": "webpack --mode development",
+    "build:prod": "webpack --mode production"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8"
+  }
+}
