@@ -1,6 +1,7 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const config = (env, args) => {
   return {
@@ -29,6 +30,7 @@ const config = (env, args) => {
       ]
     },
     plugins: [
+      new CleanWebpackPlugin(['dist']),
       new HtmlWebPackPlugin({
         template: path.resolve(__dirname, 'src/index.html'),
         filename: './index.html'
