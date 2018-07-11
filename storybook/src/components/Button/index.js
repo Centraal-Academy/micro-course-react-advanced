@@ -2,5 +2,6 @@ import React from 'react'
 
 export default function Button (props) {
   const { children, ...properties } = props
-  return <button {...properties} > {children} </button>
+  const style = { fontSize: '1.5rem' }
+  return <button style={style} {...properties} >{children}</button>
 }
