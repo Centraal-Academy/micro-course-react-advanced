@@ -30,5 +30,6 @@ module.exports = {
   globals: {
     React,
     Enzyme
-  }
+  },
+  snapshotSerializers: ['enzyme-to-json/serializer']
 }
