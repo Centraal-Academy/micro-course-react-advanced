@@ -1,9 +1,9 @@
 
 /* eslint-env jest */
-/* global Enzyme */
 
+import React from 'react'
+import { shallow, mount } from 'enzyme'
 import Button from '../../../src/components/Button'
-const { shallow, mount } = Enzyme
 
 describe('Button Test', () => {
   test('test for button', () => {
