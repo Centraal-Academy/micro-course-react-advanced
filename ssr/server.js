@@ -1,5 +1,4 @@
 import express from 'express'
-import path from 'path'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
@@ -8,8 +7,7 @@ import { indexTemplate } from './modules/template'
 
 const app = express()
 
-app.use(express.static(path.resolve(__dirname, 'dist')))
-
+app.use(express.static('dist'))
 app.get('/*', function (req, res) {
   const context = {}
 
