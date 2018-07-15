@@ -1,5 +1,6 @@
 import React from 'react'
+import './index.css'
 
 export default function Home (props) {
-  return <h1>Home</h1>
+  return <h1 className='Home'>Home</h1>
 }
