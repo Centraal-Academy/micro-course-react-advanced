@@ -3,7 +3,7 @@ const webpack = require('webpack')
 
 module.exports = {
   entry: {
-    libraries: [
+    library: [
       'lodash',
       'react',
       'react-dom'
@@ -17,7 +17,7 @@ module.exports = {
   plugins: [
     new webpack.DllPlugin({
       name: '[name]',
-      path: path.join(__dirname, '[name]-manifest.json')
+      path: path.join(__dirname, 'dist/library/[name]-manifest.json')
     })
   ]
 }

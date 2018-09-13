@@ -1,4 +1,5 @@
 const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   module: {
@@ -32,7 +33,11 @@ module.exports = {
   },
   plugins: [
     new webpack.DllReferencePlugin({
-      manifest: require('./libraries-manifest.json')
+      context: __dirname,
+      manifest: require('./dist/library/library-manifest.json')
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
     })
   ]
 }
